@@ -4,7 +4,7 @@
  * wires up all page-level interactions.
  *
  * Sequence:
- *   1. whoami  → type "Hendrix Marak"
+ *   1. whoami  → type "Hendrix Ch Marak"
  *   2. role    → type role string
  *   3. sys     → type uname string
  */
@@ -20,8 +20,8 @@
 
   // ── Terminal lines ───────────────────────────────────────────
   const LINES = {
-    name: 'Hendrix Marak',
-    role: 'Systems Programmer · C / C++ / JS · Low-level engineering',
+    name: 'Hendrix Ch Marak',
+    role: 'Systems Programmer · C / C++ / JS ·',
     sys:  'Linux arch 6.9.3-arch1-1 x86_64 GNU/Linux — KDE Plasma',
   };
 
