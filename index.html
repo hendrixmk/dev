@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Hendrix Marak — Systems Programmer. C, C++, Linux, Low-level engineering." />
+  <title>Hendrix Marak</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/sections.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+
+      <a class="nav__brand" href="#hero" aria-label="Home">
+        <span class="nav__prompt">~$</span>
+        <span class="nav__name">hendrixmk</span>
+        <span class="nav__cursor" aria-hidden="true"></span>
+      </a>
+
+      <div class="nav__links" role="list">
+        <a class="nav__link" href="#stack" role="listitem">stack</a>
+        <a class="nav__link" href="#projects" role="listitem">projects</a>
+        <a class="nav__link" href="#contact" role="listitem">contact</a>
+      </div>
+
+      <div class="nav__social">
+        <a class="nav__gh" href="https://github.com/hendrixmk" target="_blank" rel="noopener" aria-label="GitHub profile">
+          <svg class="icon icon--gh" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+          </svg>
+          <span class="nav__gh-label">hendrixmk</span>
+        </a>
+      </div>
+
+      <button class="nav__menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="nav__mobile-menu" id="mobileMenu" aria-hidden="true">
+      <a class="nav__mobile-link" href="#stack">stack</a>
+      <a class="nav__mobile-link" href="#projects">projects</a>
+      <a class="nav__mobile-link" href="#contact">contact</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="hero" aria-labelledby="hero-name">
+      <div class="hero__inner">
+
+        <div class="hero__terminal" role="region" aria-label="Terminal introduction">
+          <div class="hero__terminal-bar" aria-hidden="true">
+            <span class="dot dot--r"></span>
+            <span class="dot dot--y"></span>
+            <span class="dot dot--g"></span>
+            <span class="terminal-title">zsh — hendrix@arch</span>
+          </div>
+          <div class="hero__terminal-body">
+            <p class="hero__line hero__line--dim" aria-hidden="true"><span class="hero__prompt">~$</span> whoami</p>
+            <h1 class="hero__name" id="hero-name">
+              <span class="hero__name-text" id="heroNameText"></span><span class="hero__name-cursor" aria-hidden="true"></span>
+            </h1>
+            <p class="hero__line hero__line--dim" aria-hidden="true" style="margin-top: 1.2rem;"><span class="hero__prompt">~$</span> cat role.txt</p>
+            <p class="hero__role" id="heroRole"></p>
+            <p class="hero__line hero__line--dim" aria-hidden="true" style="margin-top: 1.2rem;"><span class="hero__prompt">~$</span> uname -a</p>
+            <p class="hero__sys" id="heroSys"></p>
+          </div>
+        </div>
+
+        <div class="hero__meta">
+          <div class="hero__badge-row">
+            <span class="badge badge--active">
+              <span class="badge__dot"></span>
+              Available for opportunities
+            </span>
+            <span class="badge badge--loc"> Meghalaya</span>
+          </div>
+          <div class="hero__cta-row">
+            <a class="btn btn--primary" href="https://github.com/hendrixmk" target="_blank" rel="noopener">
+              View GitHub
+            </a>
+            <a class="btn btn--ghost" href="#contact">
+              Get in touch
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- STACK -->
+    <section class="section" id="stack" aria-labelledby="stack-heading">
+      <div class="container">
+        <h2 class="section__label" id="stack-heading"><span class="section__num">01</span> tech stack</h2>
+
+        <div class="stack-grid">
+
+          <div class="stack-card" data-reveal>
+            <h3 class="stack-card__title">Languages</h3>
+            <div class="chip-row">
+              <span class="chip chip--c">C</span>
+              <span class="chip chip--cpp">C++</span>
+              <span class="chip chip--js">JavaScript</span>
+            </div>
+          </div>
+
+          <div class="stack-card" data-reveal>
+            <h3 class="stack-card__title">Environment</h3>
+            <div class="chip-row">
+              <span class="chip">
+                <svg class="chip__icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20.81 15.06c-.21.06-.38.19-.48.38l-.69 1.39-1.39-.69a.756.756 0 00-.38-.08.77.77 0 00-.77.77v4.24c0 .43.34.77.77.77.14 0 .27-.04.38-.1l1.39-.69.69 1.39c.1.19.27.33.48.38.06.02.12.02.19.02a.77.77 0 00.77-.77v-6.16a.77.77 0 00-.96-.75zM11.5 0C5.15 0 0 5.15 0 11.5S5.15 23 11.5 23 23 17.85 23 11.5 17.85 0 11.5 0zm5.51 15.51l-1.33 1.33-4.18-4.18-4.18 4.18-1.33-1.33 4.18-4.18-4.18-4.18 1.33-1.33 4.18 4.18 4.18-4.18 1.33 1.33-4.18 4.18 4.18 4.18z"/></svg>
+                Linux
+              </span>
+              <span class="chip">Arch</span>
+              <span class="chip">KDE Plasma</span>
+            </div>
+          </div>
+
+          <div class="stack-card" data-reveal>
+            <h3 class="stack-card__title">Databases</h3>
+            <div class="chip-row">
+              <span class="chip chip--mongo">MongoDB</span>
+              <span class="chip chip--mysql">MySQL</span>
+            </div>
+          </div>
+
+          <div class="stack-card" data-reveal>
+            <h3 class="stack-card__title">Tools</h3>
+            <div class="chip-row">
+              <span class="chip">VSCode</span>
+              <span class="chip">Vim</span>
+              <span class="chip">Git</span>
+              <span class="chip">GDB</span>
+              <span class="chip">Make</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects" aria-labelledby="projects-heading">
+      <div class="container">
+        <h2 class="section__label" id="projects-heading"><span class="section__num">02</span> projects</h2>
+
+        <div class="projects-grid">
+
+          <article class="proj-card" data-reveal>
+            <div class="proj-card__header">
+              <svg class="proj-card__folder" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 7a2 2 0 012-2h3.586a1 1 0 01.707.293L10.707 6.7A1 1 0 0011.414 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/></svg>
+              <a class="proj-card__gh-link" href="https://github.com/hendrixmk" target="_blank" rel="noopener" aria-label="View on GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+            </div>
+            <h3 class="proj-card__name">C Quiz App</h3>
+            <p class="proj-card__desc">Terminal-based quiz engine built in C. Multi-file architecture, Makefile-driven build, MIT licensed.</p>
+            <div class="proj-card__tags">
+              <span class="tag">C</span>
+              <span class="tag">Makefile</span>
+              <span class="tag">CLI</span>
+            </div>
+          </article>
+
+          <article class="proj-card" data-reveal>
+            <div class="proj-card__header">
+              <svg class="proj-card__folder" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 7a2 2 0 012-2h3.586a1 1 0 01.707.293L10.707 6.7A1 1 0 0011.414 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/></svg>
+              <a class="proj-card__gh-link" href="https://github.com/hendrixmk" target="_blank" rel="noopener" aria-label="View on GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+            </div>
+            <h3 class="proj-card__name">Portfolio Site</h3>
+            <p class="proj-card__desc">Vanilla HTML/CSS/JS — no frameworks. Scroll-spy nav, live IST clock, light/dark toggle with localStorage.</p>
+            <div class="proj-card__tags">
+              <span class="tag">JavaScript</span>
+              <span class="tag">CSS</span>
+              <span class="tag">HTML</span>
+            </div>
+          </article>
+
+          <article class="proj-card" data-reveal>
+            <div class="proj-card__header">
+              <svg class="proj-card__folder" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 7a2 2 0 012-2h3.586a1 1 0 01.707.293L10.707 6.7A1 1 0 0011.414 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/></svg>
+              <a class="proj-card__gh-link" href="https://github.com/hendrixmk" target="_blank" rel="noopener" aria-label="View on GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+            </div>
+            <h3 class="proj-card__name">Church Website</h3>
+            <p class="proj-card__desc">Full-stack site for Singgimari Baptist Church. Node.js backend, MongoDB Atlas, responsive gallery with lightbox.</p>
+            <div class="proj-card__tags">
+              <span class="tag">Node.js</span>
+              <span class="tag">MongoDB</span>
+              <span class="tag">JavaScript</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section section--contact" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <h2 class="section__label" id="contact-heading"><span class="section__num">03</span> contact</h2>
+
+        <div class="contact-block" data-reveal>
+          <p class="contact-block__line">Open to systems, backend, and low-level roles.</p>
+
+          <div class="social-list" role="list">
+
+            <a class="social-item" href="https://github.com/hendrixmk" target="_blank" rel="noopener" aria-label="GitHub" role="listitem">
+              <svg class="social-item__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              <span>hendrixmk</span>
+            </a>
+
+            <a class="social-item" href="https://instagram.com/hendrixmarak" target="_blank" rel="noopener" aria-label="Instagram" role="listitem">
+              <svg class="social-item__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              <span>hendrixmarak</span>
+            </a>
+
+            <a class="social-item" href="https://linkedin.com/in/hendrixmarak" target="_blank" rel="noopener" aria-label="LinkedIn" role="listitem">
+              <svg class="social-item__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              <span>Hendrix Marak</span>
+            </a>
+
+            <a class="social-item" href="https://x.com/hendrixmarak" target="_blank" rel="noopener" aria-label="X / Twitter" role="listitem">
+              <svg class="social-item__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.742l7.727-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              <span>hendrixmarak</span>
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <span class="footer__text">© 2025 Hendrix Marak</span>
+      <span class="footer__sep" aria-hidden="true">·</span>
+      <span class="footer__text footer__text--dim">Built on Arch</span>
+    </div>
+  </footer>
+
+  <script src="js/cursor.js"></script>
+  <script src="js/typewriter.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/reveal.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>

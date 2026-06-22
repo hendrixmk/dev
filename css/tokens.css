@@ -1,0 +1,79 @@
+/* tokens.css — design system tokens */
+
+:root {
+  /* Palette */
+  --clr-bg:          #090909;
+  --clr-bg-2:        #111113;
+  --clr-bg-card:     #141417;
+  --clr-bg-card-h:   #1A1A1F;
+  --clr-border:      #222228;
+  --clr-border-h:    #3A3A45;
+
+  --clr-text:        #E4E2DC;
+  --clr-text-dim:    #6E6D72;
+  --clr-text-mid:    #A09FA5;
+
+  --clr-accent:      #4A9EFF;  /* electric blue — distinct, not generic acid green */
+  --clr-accent-glow: rgba(74, 158, 255, 0.18);
+  --clr-accent-dim:  rgba(74, 158, 255, 0.08);
+
+  --clr-cursor:      #39FF66;  /* the one green — nav cursor only */
+  --clr-cursor-glow: rgba(57, 255, 102, 0.4);
+
+  --clr-c:           #A8B9CC;  /* C language blue-grey */
+  --clr-cpp:         #659AD2;  /* C++ */
+  --clr-js:          #F0DB4F;  /* JS yellow */
+  --clr-mongo:       #47A248;
+  --clr-mysql:       #00758F;
+
+  /* Type */
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  --font-sans: 'Inter', system-ui, sans-serif;
+
+  /* Scale */
+  --text-xs:   0.6875rem;   /* 11px */
+  --text-sm:   0.8125rem;   /* 13px */
+  --text-base: 0.9375rem;   /* 15px */
+  --text-md:   1.0625rem;   /* 17px */
+  --text-lg:   1.25rem;     /* 20px */
+  --text-xl:   1.5625rem;   /* 25px */
+  --text-2xl:  2rem;        /* 32px */
+  --text-3xl:  2.75rem;     /* 44px */
+  --text-4xl:  3.5rem;      /* 56px */
+
+  /* Spacing */
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-5:  1.25rem;
+  --space-6:  1.5rem;
+  --space-8:  2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+
+  /* Radius */
+  --r-sm:  4px;
+  --r-md:  8px;
+  --r-lg:  12px;
+  --r-xl:  16px;
+
+  /* Transitions */
+  --ease-out:   cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in:    cubic-bezier(0.4, 0, 1, 1);
+  --t-fast:     120ms;
+  --t-base:     220ms;
+  --t-slow:     400ms;
+
+  /* Nav */
+  --nav-h: 56px;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --nav-h: 60px;
+  }
+}

@@ -1,0 +1,21 @@
+/* sections.css — section-level overrides and specifics */
+
+/* Ensure no margin collapse issues between sections */
+.section + .section {
+  margin-top: 0;
+}
+
+/* Stack section accent on first child card */
+.stack-card:first-child {
+  border-color: rgba(74, 158, 255, 0.18);
+}
+
+/* Project section — active card glow on first */
+.proj-card:nth-child(1):hover {
+  box-shadow: 0 8px 32px rgba(74, 158, 255, 0.08);
+}
+
+/* Contact section refinements */
+.section--contact .section__label {
+  color: var(--clr-text-dim);
+}
