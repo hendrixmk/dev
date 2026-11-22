@@ -21,7 +21,7 @@
   // ── Terminal lines ───────────────────────────────────────────
   const LINES = {
     name: 'Hendrix Ch Marak',
-    role: 'Learner',
+    role: 'DevOps',
     sys:  'Linux arch 6.9.3-arch1-1 x86_64 GNU/Linux — KDE Plasma',
   };
 
